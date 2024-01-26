@@ -30,7 +30,7 @@ function Foto() {
       <br />
       <h1>{nombre}</h1>
       <br />
-      <Image src={pokemon} alt="dog" width={500} height={500} />
+      <Image src={pokemon}  width={500} height={500} />
       <br />
       <div className={style.secontenedor}>
         <h3> About</h3>
