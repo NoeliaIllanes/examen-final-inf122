@@ -1,0 +1,12 @@
+.contenedor p {
+    width: 44px;
+    height: 21px;
+    top: 0;
+    left: 0;
+    font-family: "Poppins-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #393939;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 0;
+}
