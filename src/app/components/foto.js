@@ -10,6 +10,10 @@ function Foto() {
   const [height, setHeight] = useState("height");
   const [weight, setWeight] = useState("weight");
   const [abilities, setAbilities] = useState("abilities");
+  const [hp, setHp] = useState("hp")
+  const [attack, setAttack] = useState("attack")
+  const [defense, setDefense] = useState("defense")
+  const [speed, setSpeed] = useState("speed")
   const url = "https://pokeapi.co/api/v2/pokemon/275";
   useEffect(() => {
     fetch(url)
@@ -19,9 +23,13 @@ function Foto() {
         setNombre(data.species.name);
         ("");
         setType(data.types[0].type.name);
-        setHeight(data.game_indices[0].game_indices.height);
-        setWeight(data.types[0].type.weight);
+        setHeight(data.height);
+        setWeight(data.weight);
         setAbilities(data.abilities[0].ability.name);
+        setHp(data.weight);
+        setAttack(data.attack);
+        setDefense(data.defense);
+        setSpeed(data.speed);
       });
   }, []);
   return (
@@ -34,20 +42,15 @@ function Foto() {
       <br />
       <div className={style.secontenedor}>
         <h3> About</h3>
-        <p>
-          <strong>Type:</strong> <strong /> {type}
-        </p>
-        <p>
-          <strong>Height:</strong> {height}
-        </p>
-        <p>
-          <strong>Weight:</strong> {weight}
-        </p>
-        <p>
-          <strong>Abilities:</strong> {abilities}
-        </p>
-
+        <p><strong>Type:</strong> <strong /> {type}</p>
+        <p><strong>Height:</strong> {height}</p>
+        <p><strong>Weight:</strong> {weight}</p>
+        <p><strong>Abilities:</strong> {abilities}</p>
         <h3> Stats</h3>
+        <p><strong>HP:</strong> <strong /> {hp}</p>
+        <p><strong>Attack:</strong> {attack}</p>
+        <p><strong>Defense:</strong> {defense}</p>
+        <p><strong>Speed:</strong> {speed}</p>
       </div>
     </div>
   );
