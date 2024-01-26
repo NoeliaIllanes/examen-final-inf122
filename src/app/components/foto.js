@@ -54,5 +54,5 @@ function Foto() {
       </div>
     </div>
   );
-}
+}|
 export default Foto;
